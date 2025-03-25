@@ -5,9 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="./style/default.css">
-  <link rel="stylesheet" href="./style/weatherapp-style/main.css">
+  <link rel="stylesheet" href="./style/weatherapp-style/weather-main.css">
+
+  <!-- Google Fonts Search Icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <script src="./script/weatherapp/weather.js"></script>
 </head>
 <body>
-  
+  <div class="main-container">
+    <div class="search-bar-container">
+      <input class="search-bar" type="text " placeholder="Enter City Name">
+      <span class="material-symbols-outlined search-icon">
+        search
+        </span>
+    </div>
+
+    <div class="weather-info">
+      <img class="weather-icon" src="./images/weather-app-images/rain.png" alt="">
+      <div>
+        <span><h1 class="temperature">22°C</h1></span>
+        <span><h2 class="city">Kandy</h2></span>
+      </div>
+    </div>
+
+    <div class="weather-condition-container">
+      <div class="weather-condition">
+        <img src="./images/weather-app-images/humidity.png">
+        <div>
+          <p class="humidity">50%</p>
+          <p>Humidity</p>
+        </div>
+      </div>
+
+      <div class="weather-condition">
+        <img src="./images/weather-app-images/wind.png">
+        <div>
+          <p class="wind">15 KM/H</p>
+          <p>Wind Speed</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
