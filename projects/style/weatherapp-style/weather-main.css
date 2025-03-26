@@ -6,13 +6,26 @@
 body{
   background-color: rgb(21, 21, 21);
 }
+.container {
+  display: flex;
+  margin: 100px auto 0px;
+  background-color: #43a1a8;
+  max-width: 370px;
+  border-radius: 10px;
+  flex-direction: column;  
+}
+.go-back {
+  padding: 10px 0px 0px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
 
 .main-container {
-  padding: 40px 35px;
+  padding: 20px 35px;
   background-color: #43a1a8;
-  width: 90%;
-  max-width: 470px;
-  margin: 100px auto 0px;
+  width: 100%;
+  max-width: 100%;
   border-radius: 10px;
   color: #fff;
   display: flex;
@@ -59,7 +72,6 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }
 
 .weather-info div {
@@ -69,7 +81,7 @@ body{
   flex-direction: column;
 }
 
-.weather-info img {
+.weather-icon {
   width: 140px;
   display: none;
 }
@@ -105,6 +117,7 @@ body{
   margin-top: -6px;
 }
 
-.sub-container {
-  margin-top: 5px;
+.msg {
+  margin-top: 15px;
+  font-size: 20px;
 }

@@ -6,9 +6,9 @@ async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`)
   let data = await response.json()
   console.log(data);
-  if (data.cod == '404') {
+  if (data.cod == '404' || data.cod == '400') {
     
-    document.querySelector(".sub-container").innerHTML = "City Does Not Exist";
+    document.querySelector(".msg").innerHTML = "City Does Not Exist";
     document.querySelector(".weather-icon").style.display = "none"
   }
   else {
