@@ -1,0 +1,172 @@
+body {
+  background-color:  #2854ad;
+}
+.container {
+  margin: 100px auto 0px;
+  background-color: rgb(170, 170, 170);
+  width: 370px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+.back {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0px 15px 0px;
+}
+
+.main-container h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(108, 108, 245);
+}
+
+.taskbar {
+  position: relative;
+  width: 100%;
+}
+
+.task-input {
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.task-input:focus {
+  outline: none; 
+}
+
+.btnadd {
+  position: absolute;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  right: 0.1px;
+  background-color: rgb(88, 240, 88);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.btnadd:hover {
+  opacity: 0.8;
+}
+
+.btnadd:active {
+  opacity: 0.9;
+}
+
+.task-container {
+  padding: 5px 0px 5px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  
+}
+.tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 18px;
+}
+
+ul li {
+  padding: 5px 0px 5px 0px;
+  text-decoration: none;
+  width: 100%;
+  text-indent: 33px;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+ul li:first-letter {
+  text-transform: uppercase;
+}
+ul li::before{
+  content: '';
+  background-image: url(../../images/todo-list-images/unchecked.png);
+  position: absolute;
+  height: 31px;
+  width: 31px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  left: -2px;
+  top: -1px;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+ul li.checked::before {
+  background-image: url(../../images/todo-list-images/checked.png);
+}
+
+.error-msg {
+  display: none;
+  color: red;
+  font-size: larger;
+}
+
+.sub-task-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: white;
+  text-decoration: none;
+  width: 100%;
+}
+
+.btndelete {
+  position: absolute;
+  right: 1px;
+  color: red;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.btndelete:hover {
+  opacity: 0.7;
+}
+
+.btndelete:active {
+  opacity: 0.1;
+}
+
+.btnclear{
+  padding: 3px 20px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #1460f8;
+  border: 1px solid transparent;
+  color: white;
+  font-size: 16px;
+  display: none;
+  margin-top: 20px;
+}
+
+.btnclear:hover {
+  opacity: 0.7;
+}
+
+.btnclear:active {
+  opacity: 0.1;
+}

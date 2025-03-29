@@ -3,9 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Your List</title>
+  <link rel="stylesheet" href="./style/default.css">
+  <link rel="stylesheet" href="./style/todo-list-style/todo-list-main.css">
+  <!-- Delete Icon from google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@30,400,0,0&icon_names=delete" />
 </head>
 <body>
-  
+  <div class="container">
+    <a href="../index.html" class="back">Go Back</a>
+    <div class="main-container">
+      <div><h1>To Do List</h1></div>
+      <div class="taskbar">
+        <input class="task-input" type="text" placeholder="Enter Your Task">
+        <button class="btnadd" >Add</button>
+      </div>
+      <h3 class="error-msg">You must enter a task</h3>
+
+      <div class="task-container">
+        <ul class="tasks">
+        </ul>
+        <div>
+          <button class="btnclear">Clear</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script src="./script/todo-list/todo.js"></script>
 </html>

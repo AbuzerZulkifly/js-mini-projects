@@ -1,6 +1,7 @@
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const apiKey = "1376fe1b2fe627ceb50403bc9be5838e";
 let weatherImg = document.querySelector(".weather-icon");
+let mainData = document.querySelector(".sub-container");
 
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`)
@@ -12,10 +13,9 @@ async function checkWeather(city) {
     document.querySelector(".weather-icon").style.display = "none"
   }
   else {
-  document.querySelector(".weather-icon").style.display = "inline"
-  document.querySelector(".sub-container").innerHTML = `
+   document.querySelector(".sub-container").innerHTML = `
      <div class="weather-info">
-
+      <img class="weather-icon" src="../projects/images/weather-app-images/${data.weather[0].main}.png" alt="">
       <div>
         <h1><span class="condition">${data.weather[0].main}</span></h1>
         <h1><span class="temp">${Math.round(data.main.temp)}°C</span></h1>
@@ -42,30 +42,31 @@ async function checkWeather(city) {
       </div>
     </div>
   `
+  saveData();
 }
 //img path should be directed according to the html page
 
-  switch (data.weather[0].main) {
-    case "Clear":
-      weatherImg.src = "./images/weather-app-images/clear.png"
-      break;
-    case "Clouds":
-      weatherImg.src = "./images/weather-app-images/clouds.png"
-      break;
-    case "Rain":
-      weatherImg.src = "./images/weather-app-images/rain.png"
-      break;
-    case "Drizzle":
-      weatherImg.src = "./images/weather-app-images/drizzle.png"
-      break;
-    case "Mist":
-      weatherImg.src = "./images/weather-app-images/mist.png"
-      break;
-    case "Snow":
-      weatherImg.src = "./images/weather-app-images/clear.png"
-      break;
-  }
-}
+//   switch (data.weather[0].main) {
+//     case "Clear":
+//       weatherImg.src = "./images/weather-app-images/clear.png"
+//       break;
+//     case "Clouds":
+//       weatherImg.src = "./images/weather-app-images/clouds.png"
+//       break;
+//     case "Rain":
+//       weatherImg.src = "./images/weather-app-images/rain.png"
+//       break;
+//     case "Drizzle":
+//       weatherImg.src = "./images/weather-app-images/drizzle.png"
+//       break;
+//     case "Mist":
+//       weatherImg.src = "./images/weather-app-images/mist.png"
+//       break;
+//     case "Snow":
+//       weatherImg.src = "./images/weather-app-images/clear.png"
+//       break;
+//   }
+ }
 
 let cityName = document.querySelector(".search-bar")
 
@@ -75,5 +76,16 @@ cityName.addEventListener('keydown', (event) =>{
     console.log(cityName.value)
     document.querySelector(".weather-condition-container").style.display = "flex"
     document.querySelector(".weather-icon").style.display = "inline"
+    saveData();
   }
 })
+
+// function saveData() {
+//   localStorage.setItem("data", mainData.innerHTML)
+// }
+
+// function showData() {
+//   mainData.innerHTML = localStorage.getItem("data");
+// }
+
+// showData();
