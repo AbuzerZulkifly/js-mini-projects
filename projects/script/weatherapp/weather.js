@@ -9,8 +9,8 @@ async function checkWeather(city) {
   console.log(data);
   if (data.cod == '404' || data.cod == '400') {
     
-    document.querySelector(".msg").innerHTML = "City Does Not Exist";
-    document.querySelector(".weather-icon").style.display = "none"
+    mainData.innerHTML = "City Does Not Exist";
+    mainData.style.margin = "5px"
   }
   else {
    document.querySelector(".sub-container").innerHTML = `
@@ -42,7 +42,7 @@ async function checkWeather(city) {
       </div>
     </div>
   `
-  saveData();
+  // saveData();
 }
 //img path should be directed according to the html page
 
@@ -74,9 +74,7 @@ cityName.addEventListener('keydown', (event) =>{
   if(event.key === 'Enter') {
     checkWeather(cityName.value)
     console.log(cityName.value)
-    document.querySelector(".weather-condition-container").style.display = "flex"
-    document.querySelector(".weather-icon").style.display = "inline"
-    saveData();
+    // saveData();
   }
 })
 
