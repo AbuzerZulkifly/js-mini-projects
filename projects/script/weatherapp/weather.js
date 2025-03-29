@@ -11,6 +11,9 @@ async function checkWeather(city) {
     
     mainData.innerHTML = "City Does Not Exist";
     mainData.style.margin = "5px"
+    setTimeout(function() {
+      mainData.innerHTML = "";
+  }, 2000);
   }
   else {
    document.querySelector(".sub-container").innerHTML = `
@@ -69,6 +72,8 @@ async function checkWeather(city) {
  }
 
 let cityName = document.querySelector(".search-bar")
+let btnSearch = document.querySelector(".btnsearch")
+
 
 cityName.addEventListener('keydown', (event) =>{
   if(event.key === 'Enter') {
@@ -76,6 +81,11 @@ cityName.addEventListener('keydown', (event) =>{
     console.log(cityName.value)
     // saveData();
   }
+})
+
+btnSearch.addEventListener('click', ()=>{
+    checkWeather(cityName.value)
+   
 })
 
 // function saveData() {
