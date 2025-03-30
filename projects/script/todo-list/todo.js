@@ -2,23 +2,18 @@ let taskInput = document.querySelector(".task-input");
 let taskContainer = document.querySelector(".tasks");
 let btnAdd = document.querySelector(".btnadd");
 let btnClear = document.querySelector(".btnclear")
-
-if (taskContainer.innerHTML !== "" && window.localStorage.length != 1) {
-  btnClear.style.display = "none"
-}
-else if(window.localStorage.length == 1) {
-  btnClear.style.display = "block"
-}
-console.log(window.localStorage.length);
+let errorMsg = document.querySelector('.error-msg');
 
 
 function addtask() {
   if (taskInput.value === '') {
-    document.querySelector('.error-msg').style.display = "block"
+    errorMsg.innerHTML = "You must enter a task"
+    setTimeout(function() {
+      errorMsg.innerHTML = "";
+  }, 2000);
   }
   else {
     btnClear.style.display = 'block'
-    document.querySelector('.error-msg').style.display = "none"
     let newTask = document.createElement("div");
     newTask.className = "sub-task-container"
     let inputValue = taskInput.value
@@ -40,12 +35,13 @@ taskContainer.addEventListener('click', (e)=> {
     
   }
   else if (e.target.tagName === "SPAN") {
-    e.target.parentElement.remove();
-    if (taskContainer.innerHTML == "") {
-      btnClear.style.display = "none"
+    location.replace(location.href);
+    if (taskContainer.innerHTML.length == 1) {
+      localStorage.removeItem("listData")
+      console.log(taskContainer.innerHTML.length)
     }
+    e.target.parentElement.remove();
     saveData()
-   
     
   }
 })
@@ -62,11 +58,11 @@ taskInput.addEventListener('keydown', (e)=>{
 })
 
 function saveData() {
-  localStorage.setItem("data", taskContainer.innerHTML);
+  localStorage.setItem("listData", taskContainer.innerHTML);
 }
 
 function showData() {
-  taskContainer.innerHTML = localStorage.getItem("data")
+  taskContainer.innerHTML = localStorage.getItem("listData")
 
 
 }
@@ -74,7 +70,17 @@ function showData() {
 showData();
 
 btnClear.addEventListener('click', ()=> {
-  localStorage.clear();
+  localStorage.removeItem("listData");
   document.querySelector(".tasks").innerHTML = ""
   btnClear.style.display = "none"
+  location.reload();
 })
+
+
+if (localStorage.getItem("listData") == null || taskContainer.innerHTML.length == 0) {
+  btnClear.style.display = "none"
+}
+else if (localStorage.getItem("listData") != null) {
+  btnClear.style.display = "block"
+}
+console.log(localStorage.length);

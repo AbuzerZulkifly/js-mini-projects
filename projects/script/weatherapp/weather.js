@@ -45,7 +45,7 @@ async function checkWeather(city) {
       </div>
     </div>
   `
-  // saveData();
+  saveData();
 }
 //img path should be directed according to the html page
 
@@ -79,21 +79,22 @@ cityName.addEventListener('keydown', (event) =>{
   if(event.key === 'Enter') {
     checkWeather(cityName.value)
     console.log(cityName.value)
-    // saveData();
+    saveData();
   }
 })
 
 btnSearch.addEventListener('click', ()=>{
     checkWeather(cityName.value)
+    saveData();
    
 })
 
-// function saveData() {
-//   localStorage.setItem("data", mainData.innerHTML)
-// }
+ function saveData() {
+   localStorage.setItem("weatherData", mainData.innerHTML)
+ }
 
-// function showData() {
-//   mainData.innerHTML = localStorage.getItem("data");
-// }
+ function showData() {
+   mainData.innerHTML = localStorage.getItem("weatherData");
+ }
 
-// showData();
+ showData();

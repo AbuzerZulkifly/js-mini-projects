@@ -58,13 +58,6 @@ body {
   font-weight: bold;
 }
 
-.btnadd:hover {
-  opacity: 0.8;
-}
-
-.btnadd:active {
-  opacity: 0.9;
-}
 
 .task-container {
   padding: 5px 0px 5px 0px;
@@ -88,7 +81,6 @@ ul li {
   width: 100%;
   text-indent: 33px;
   cursor: pointer;
-  text-align: center;
 
 }
 
@@ -118,7 +110,6 @@ ul li.checked::before {
 }
 
 .error-msg {
-  display: none;
   color: red;
   font-size: larger;
 }
@@ -143,16 +134,11 @@ ul li.checked::before {
   cursor: pointer;
 }
 
-.btndelete:hover {
-  opacity: 0.7;
+.btnclear-container {
+  width: 100%;
 }
-
-.btndelete:active {
-  opacity: 0.1;
-}
-
 .btnclear{
-  padding: 3px 20px;
+  padding: 4px 0px;
   width: 100%;
   border-radius: 20px;
   background-color: #1460f8;
@@ -160,13 +146,4 @@ ul li.checked::before {
   color: white;
   font-size: 16px;
   display: none;
-  margin-top: 20px;
-}
-
-.btnclear:hover {
-  opacity: 0.7;
-}
-
-.btnclear:active {
-  opacity: 0.1;
 }
