@@ -1,0 +1,24 @@
+.main-container {
+  width: 100%;
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 0px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mini-project {
+  box-shadow: 10px 10px 10px gray;
+  border-radius: 14px;
+}
+
+.mini-project img {
+  width: auto;
+  height: 160px;
+  border-radius: 10px;
+}
