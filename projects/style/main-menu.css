@@ -1,0 +1,35 @@
+body {
+  
+  background-color: rgb(209, 209, 209);
+}
+
+.main-container {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.container {
+  margin: 0px auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.mini-project {
+  display: flex;
+  justify-content: center;
+  max-width: 280px;
+  box-shadow: 10px 10px 10px gray;
+  border-radius: 14px;
+}
+
+.mini-project img {
+  width: 280px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.mini-project:hover {
+  scale: 1.2;
+}
