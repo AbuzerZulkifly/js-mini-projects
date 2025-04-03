@@ -16,6 +16,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .search-form {
@@ -23,12 +24,12 @@ h1 {
   padding: 20px;
   justify-content: center;
   width: 100%;
-  position: relative;
   align-items: center;
 }
 
 .img-input {
-  width: 50%;
+  width: 100%;
+  position: relative;
   text-align: center;
   padding: 15.5px 0px;
   border: 1px solid transparent;
@@ -38,13 +39,13 @@ h1 {
 
 .btnsearch {
   position: absolute;
-  right: 343px;
+  right: 119px;
   background-color: orange;
   border: 0px ;
   padding: 6.4px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  width: 90px;
+  width: 80px;
   cursor: pointer;
 }
 
@@ -58,4 +59,23 @@ h1 {
   border: 0px solid transparent;
   background-color: orange;
   border-radius: 10px;
+  margin-top: 50px;
+  cursor: pointer;
 }
+.search-result {
+ margin-top: 20px;
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr ;
+ grid-gap: 40px;
+ padding: 0px 20px;
+}
+.search-result img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.images:hover {
+  scale: 1.1;
+}
+
