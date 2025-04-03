@@ -20,7 +20,7 @@ async function checkWeather(city) {
   else {
    document.querySelector(".sub-container").innerHTML = `
      <div class="weather-info">
-      <img class="weather-icon" src="../projects/images/weather-app-images/${data.weather[0].main}.png" alt="">
+      <img class="weather-icon" src="images/weather-app-images/${data.weather[0].main}.png" alt="">
       <div>
         <h1><span class="condition">${data.weather[0].main}</span></h1>
         <h1><span class="temp">${Math.round(data.main.temp)}°C</span></h1>
