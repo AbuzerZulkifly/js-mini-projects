@@ -1,19 +1,23 @@
 body {
-  
   background-color: rgb(209, 209, 209);
 }
 
+h1 {
+  margin-bottom: 5px;
+  text-align: center;
+}
 .main-container {
   width: 100%;
-  padding-top: 100px;
+  margin: 100px auto;
 }
 
 .container {
   margin: 0px auto;
-  width: 80%;
+  max-width: 61.9%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 50px;
   flex-wrap: wrap;
+
 }
 
 .mini-project {
@@ -30,6 +34,6 @@ body {
   border-radius: 10px;
 }
 
-.mini-project:hover {
+.sub-container:hover {
   scale: 1.2;
 }
