@@ -1,8 +1,8 @@
 .main-container {
   width: 100%;
-  padding-top: 35px;
   display: flex;
   justify-content: center;
+  margin: 10px auto;
 }
 
 .container {
@@ -18,7 +18,7 @@
 }
 
 .mini-project img {
-  width: auto;
-  height: 160px;
+  width: 180px;
+  height: auto;
   border-radius: 10px;
 }
