@@ -1,38 +1,48 @@
 body {
   background-color: rgb(94, 109, 109);
 }
-@media screen and (max-width: 321px) {
+/* @media screen and (min-width: 320px ) {
   .main-container {
     margin: 10px auto 0px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid transparent;
     border-radius: 20px;
-    max-width: 315px;
+    max-width: 95%;
     background-color: white;
   }  
 }
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 361px) {
   .main-container {
     margin: 30px auto 0px;
     padding: 7px;
     border: 1px solid transparent;
     border-radius: 20px;
-    max-width: 370px;
+    max-width: 95%;
     background-color: white;
   }  
+
+
 }
 
 @media screen and (min-width: 765px) {
   .main-container {
     margin: 50px auto 0px;
-    padding: 20px;
+    padding: 40px;
     border: 1px solid transparent;
     border-radius: 20px;
     max-width: 700px;
     background-color: white;
   }  
-}
+} */
+.main-container {
+  margin: 30px auto 0px;
+  padding: 7px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  max-width: 95%;
+  background-color: white;
+}  
 
 
 h1 {
@@ -45,15 +55,19 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   width: 100%;
 }
 
 .container div {
   width: 100%;
 }
-.author {
-  text-align: end;
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 80%;
 }
 
 button {
@@ -64,5 +78,4 @@ button {
   color: black;
   font-weight: 600;
   cursor: pointer;
-
 }
