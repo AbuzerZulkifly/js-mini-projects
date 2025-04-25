@@ -1,0 +1,12 @@
+body{
+  background: -webkit-linear-gradient(right, blue 10%,#fff 50%,blue 100%);
+}
+
+@media screen and (min-width:980px) {
+  .main {
+    padding: 20px;
+    border: 1px solid black;
+    width: 570px;
+    margin: 100px auto 0px;
+  }
+}
