@@ -6,6 +6,32 @@ h1 {
   margin-bottom: 5px;
   text-align: center;
 }
+@media screen and (max-width: 1024px) {
+  .main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+  }
+  
+  .container {
+    margin: 0px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .mini-project {
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 14px;
+  }
+  
+  .mini-project img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+  }
+}
 .main-container {
   width: 100%;
   margin: 100px auto;
@@ -29,8 +55,8 @@ h1 {
 }
 
 .mini-project img {
-  width: 280px;
-  height: 300px;
+  width: 150px;
+  height: 180px;
   border-radius: 10px;
 }
 
