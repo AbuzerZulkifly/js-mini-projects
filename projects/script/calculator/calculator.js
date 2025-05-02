@@ -56,3 +56,5 @@ clearBtn.addEventListener("click", ()=> {
   calculatorDisplay.value = 0
 })
 deleteBtn.addEventListener("click", ()=> calculatorDisplay.value = calculatorDisplay.value.toString().slice(0,-1))
+
+
